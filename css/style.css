@@ -1,0 +1,30 @@
+h1 {
+text-align: center;
+color: Blue;
+font-style: italic;
+}
+
+h2 {
+text-align: right;
+font-style: italic;
+margin-right: 320;
+}
+
+ul {
+margin-left: 170;
+font-size: 20;
+}
+
+p {
+margin-left: 170;
+margin-right: 300;
+font-size: 20;
+text-indent: 5;
+text-align: justify;
+}
+
+body {
+    background-image: url("/image/fon1.jpg");
+    background-size: 100%;
+}
+
