@@ -13,7 +13,7 @@
 	<?php endif; ?>
 
 <form action="#" method="post">
-<input type="text" class="user" name="FIO" placeholder="ФИО" value=""/><br><br>
+<input type="text" class="user" name="fio" placeholder="ФИО" value=""/><br><br>
 <input type="text" class="user" name="proc_com" placeholder="Процент комиссионных" value=""/><br><br>
 <input type="text" class="user" name="role" placeholder="Роль (1 - Адм., 0 - Польз.)" value=""/><br><br>
 <input type="text" class="user" name="login" placeholder="Логин" value=""/><br><br>

@@ -2,7 +2,7 @@
 // Массив с параметрами подключения к базе данных
 return array(
     'host' => 'localhost',
-    'dbname' => 'magazine',
+    'dbname' => 'php_project',
     'user' => 'root',
     'password' => 'admin',
 );

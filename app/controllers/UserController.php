@@ -32,6 +32,7 @@ class UserController
             // Проверяем существует ли пользователь
             $userId = User::checkUserData($login, $password);
 
+			$errors[] = "$userId";
 			if ($userId == false)
 			{
                 // Если данные неправильные - показываем ошибку-
@@ -64,6 +65,7 @@ class UserController
 	   	{
 			$login = $_POST['login'];
 			$password = $_POST['password'];
+			$fio = $_POST['fio'];
 
             $errors = false;
 
@@ -77,7 +79,7 @@ class UserController
 				{
 					if(User::checkPassword($password))
 					{
-						RegisterUser::register($login, $password);
+						RegisterUser::register($login, $password, $fio);
 						header('Location: /user/login');
 					}
 					else

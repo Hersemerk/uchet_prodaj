@@ -11,6 +11,7 @@ class AdminController extends AdminBase
         self::checkAdmin();
 
         // Подключаем вид
+		echo $_SESSION['user'];
         require_once(ROOT . '/app/views/admin/index.php');
         return true;
     }
@@ -47,6 +48,25 @@ class AdminController extends AdminBase
         // Подключаем вид
         self::checkAdmin();
         require_once(ROOT . '/app/views/admin/dobavit.php');
+        return true;
+    }
+
+    public function actionSell()
+    {
+	    $tovar = false;
+	    $amount = false;
+
+	    if (isset($_POST['submit']))
+	    {
+		$tovar = $_POST['tovar'];
+	    	$amount = $_POST['amount'];
+
+		SellTovar::sell($tovar, $amount);
+		Seller::commision($tovar, $amount);
+    
+		}
+		self::checkAdmin();
+        require_once(ROOT . '/app/views/admin/sell.php');
         return true;
     }
 }

@@ -31,7 +31,7 @@ class User
         $db = Db::getConnection();
 
         // Текст запроса к БД
-        $sql = 'SELECT * FROM user WHERE login = :login AND password = :pass';
+        $sql = 'SELECT * FROM user WHERE user = :login AND pass = :pass';
 
         // Получение результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);

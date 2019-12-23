@@ -7,6 +7,7 @@ return array(
     'user/logout' => 'user/logout',   //выход из системы
 
     // Админпанель:
+	'admin/prodat_tovar' => 'admin/sell',
     'admin/dobavit_tovar' => 'admin/dobavit',
     'admin' => 'admin/index',  //админпанель
 
